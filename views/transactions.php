@@ -28,41 +28,41 @@
     </style>
 </head>
 <body>
-    <table>
-        <thead>
+<table>
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Check</th>
+        <th>Description</th>
+        <th>Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php if (!empty($transactions)): ?>
+        <?php foreach ($transactions as $transaction): ?>
             <tr>
-                <th>Date</th>
-                <th>Check</th>
-                <th>Description</th>
-                <th>Amount</th>
+                <td><?= $transaction['date'] ?></td>
+                <td><?= $transaction['checkNumber'] ?></td>
+                <td><?= $transaction['description'] ?></td>
+                <td><?= $transaction['amount'] ?></td>
             </tr>
-        </thead>
-        <tbody>
-            <?php if(! empty($transactions)): ?>
-                <?php foreach ($transactions as $transaction): ?>
-                    <tr>
-                        <td><?= $transaction[0] ?></td>
-                        <td><?= $transaction[1] ?></td>
-                        <td><?= $transaction[2] ?></td>
-                        <td><?= $transaction[3] ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th colspan="3">Total Income:</th>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Total Expense:</th>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Net Total:</th>
-                <td></td>
-            </tr>
-        </tfoot>
-    </table>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th colspan="3">Total Income:</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Total Expense:</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Net Total:</th>
+        <td></td>
+    </tr>
+    </tfoot>
+</table>
 </body>
 </html>

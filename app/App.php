@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-function getTransactionFiles(string $dirPath): array {
+function getTransactionFiles(string $dirPath): array
+{
     $files = [];
 
     foreach (scandir($dirPath) as $file) {
@@ -16,8 +17,9 @@ function getTransactionFiles(string $dirPath): array {
     return $files;
 }
 
-function getTransactions(string $filePath): array {
-    if (! file_exists($filePath)) {
+function getTransactions(string $filePath): array
+{
+    if (!file_exists($filePath)) {
         trigger_error('File "' . $filePath . '" does not exist!', E_USER_ERROR);
     }
 
@@ -28,8 +30,22 @@ function getTransactions(string $filePath): array {
     $transactions = [];
 
     while (($transaction = fgetcsv($file)) !== false) {
-        $transactions[] = $transaction;
+        $transactions[] = parseTransaction($transaction);
     }
 
     return $transactions;
+}
+
+function parseTransaction(array $transactionRow): array
+{
+    [$date, $checkNumber, $description, $amount] = $transactionRow;
+
+    $amount = (float)str_replace(['$', ','], '', $amount);
+
+    return [
+        'date' => $date,
+        'checkNumber' => $checkNumber,
+        'description' => $description,
+        'amount' => $amount
+    ];
 }
