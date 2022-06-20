@@ -1,2 +1,2 @@
-# budgetapp
-Simple budget app with vanilla php
+# pomodoro
+Simple pomodoro app with html, css and javascript
