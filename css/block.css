@@ -1,3 +1,33 @@
 .pomodoro {
   text-align: center;
 }
+
+.pomodoro__btns {
+  background-color: var(--clr-bg-2);
+  border-radius: 31px;
+  padding: 8px;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 26px;
+  color: var(--clr-text-500);
+  cursor: pointer;
+  padding: 15px 25px;
+  transition: all .3s;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+
+.btn:where(:not(.active)):hover {
+  color: var(--clr-text-400);
+}
+
+.active {
+  background-color: var(--theme);
+  color: var(--clr-btn-text);
+}
