@@ -2,7 +2,7 @@
   --ff-kumbh: 'Kumbh Sans', sans-serif;
   --ff-roboto: 'Roboto Slab', serif;
   --ff-space: 'Space Mono', monospace;
-  --ff-base: var(var(--ff-kumbh));
+  --ff-base: var(--ff-kumbh);
 
   --clr-theme-1: hsl(0, 91%, 71%);
   --clr-theme-2: hsl(182, 91%, 71%);
