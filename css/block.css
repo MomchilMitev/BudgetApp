@@ -6,6 +6,8 @@
   background-color: var(--clr-bg-2);
   border-radius: 31px;
   padding: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 .btn {
