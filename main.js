@@ -7,14 +7,6 @@ const pomodoroCounter = document.querySelector('.pomodoro__counter')
 const pomodoroTime = document.querySelector('.pomodoro__minutes')
 const pomodoroAction = document.querySelector('.pomodoro__action')
 
-pomodoroCounter.addEventListener('click', e => {
-  if (interval === null) {
-    start();
-  } else {
-    stop();
-  }
-})
-
 function start() {
   if (remainingSeconds === 0) return;
 
@@ -52,6 +44,14 @@ function updateText() {
   }
 }
 
+pomodoroCounter.addEventListener('click', e => {
+  if (interval === null) {
+    start();
+  } else {
+    stop();
+  }
+})
+
 window.onload = () => {
-  start()
+  updateTime()
 }
