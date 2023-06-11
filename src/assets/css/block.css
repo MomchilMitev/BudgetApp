@@ -53,8 +53,6 @@
 }
 
 .pomodoro__data {
-  display: flex;
-  flex-direction: column;
   left: 50%;
   position: absolute;
   top: 50%;

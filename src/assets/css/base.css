@@ -1,12 +1,9 @@
 body {
-  align-items: center;
   background-color: var(--clr-bg-1);
   color: var(--clr-text-400);
-  display: flex;
   font-family: var(--ff-base);
   font-size: 14px;
   font-weight: var(--fw-700);
   height: 100vh;
-  justify-content: center;
   line-height: 18px;
 }
