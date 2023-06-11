@@ -4,6 +4,17 @@ let remainingSeconds = pomodoroMinutes * 60;
 const pomodoroCounter = document.querySelector('.pomodoro__counter');
 const pomodoroTime = document.querySelector('.pomodoro__minutes');
 const pomodoroAction = document.querySelector('.pomodoro__action');
+const pomodoroBrakes = document.querySelector('.pomodoro__btns');
+const pomodoroBrakeBtns = pomodoroBrakes.querySelectorAll('.btn');
+
+function handleBrakeClick(e) {
+  if (e.target.classList.contains('btn')) {
+    pomodoroBrakeBtns.forEach((b) => b.classList.remove('active'));
+    e.target.classList.add('active');
+  }
+}
+
+pomodoroBrakes.addEventListener('click', handleBrakeClick);
 
 function start() {
   if (remainingSeconds === 0) return;
