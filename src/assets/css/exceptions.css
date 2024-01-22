@@ -1,9 +1,0 @@
-[data-btn='settings'] {
-  background-color: transparent;
-  border: none;
-}
-
-[data-btn='settings']:hover,
-[data-btn='settings']:focus {
-  cursor: pointer;
-}

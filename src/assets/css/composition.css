@@ -1,3 +1,0 @@
-.flow > :where(:not(:last-child)) {
-  margin-bottom: 55px;
-}

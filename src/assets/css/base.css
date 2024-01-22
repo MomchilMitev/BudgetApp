@@ -1,9 +1,0 @@
-body {
-  background-color: var(--clr-bg-1);
-  color: var(--clr-text-400);
-  font-family: var(--ff-base);
-  font-size: 14px;
-  font-weight: var(--fw-700);
-  height: 100vh;
-  line-height: 18px;
-}
