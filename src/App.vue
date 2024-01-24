@@ -1,9 +1,10 @@
 <script setup lang="ts">
-  import { HeaderLogo } from "@/components";
+  import { ButtonsWrapper, HeaderLogo } from "@/components";
 </script>
 
 <template>
   <HeaderLogo />
+  <ButtonsWrapper />
 </template>
 
 <style scoped>
