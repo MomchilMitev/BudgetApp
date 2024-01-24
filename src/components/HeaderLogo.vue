@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header>
+  <header
+    class="flex justify-center"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="153"
