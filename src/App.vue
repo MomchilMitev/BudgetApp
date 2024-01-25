@@ -6,6 +6,3 @@
   <HeaderLogo />
   <ButtonsWrapper />
 </template>
-
-<style scoped>
-</style>

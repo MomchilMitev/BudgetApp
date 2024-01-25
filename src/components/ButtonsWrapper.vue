@@ -1,14 +1,45 @@
 <script setup lang="ts">
+  import { ref } from 'vue';
   import ModeButton from './ModeButton.vue';
-
-  const btnTexts = ['pomodoro', 'short break', 'long break'];
-
+  const activeState = ref('bg-red text-black-light');
+  const isFirstBtnActive = ref(true);
+  const isSecondBtnActive = ref(false);
+  const isThirdBtnActive = ref(false);
+  const onModeButtonClick = (index: number) => {
+    if (index === 1) {
+      isFirstBtnActive.value = true;
+      isSecondBtnActive.value = false;
+      isThirdBtnActive.value = false;
+    } else if (index === 2) {
+      isFirstBtnActive.value = false;
+      isSecondBtnActive.value = true;
+      isThirdBtnActive.value = false;
+    } else if (index === 3) {
+      isFirstBtnActive.value = false;
+      isSecondBtnActive.value = false;
+      isThirdBtnActive.value = true;
+    }
+  }
 </script>
 
 <template>
   <section
     class="bg-black-dark p-2 rounded-[31.5px] space-x-2"
   >
-    <ModeButton v-for="(text, index) in btnTexts" :key="index" :text="text" />
+    <ModeButton
+      :class="[isFirstBtnActive ? activeState : '']"
+      text="pomodoro"
+      @click="onModeButtonClick(1)"
+    />
+    <ModeButton
+      :class="[isSecondBtnActive ? activeState : '']"
+      text="short break"
+      @click="onModeButtonClick(2)"
+    />
+    <ModeButton
+      :class="[isThirdBtnActive ? activeState : '']"
+      text="long break"
+      @click="onModeButtonClick(3)"
+    />
   </section>
 </template>
