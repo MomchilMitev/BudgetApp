@@ -27,17 +27,17 @@
     class="bg-black-dark p-2 rounded-[31.5px] space-x-2"
   >
     <ModeButton
-      :class="[isFirstBtnActive ? activeState : '']"
+      :class="[isFirstBtnActive ? activeState : 'text-lila-light']"
       text="pomodoro"
       @click="onModeButtonClick(1)"
     />
     <ModeButton
-      :class="[isSecondBtnActive ? activeState : '']"
+      :class="[isSecondBtnActive ? activeState : 'text-lila-light']"
       text="short break"
       @click="onModeButtonClick(2)"
     />
     <ModeButton
-      :class="[isThirdBtnActive ? activeState : '']"
+      :class="[isThirdBtnActive ? activeState : 'text-lila-light']"
       text="long break"
       @click="onModeButtonClick(3)"
     />
