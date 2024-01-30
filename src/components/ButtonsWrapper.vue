@@ -24,7 +24,7 @@
 
 <template>
   <section
-    class="bg-black-dark p-2 rounded-[31.5px] space-x-2"
+    class="w-[373px] m-auto bg-black-dark p-2 rounded-[31.5px] flex justify-between"
   >
     <ModeButton
       :class="[isFirstBtnActive ? activeState : 'text-lila-light']"
