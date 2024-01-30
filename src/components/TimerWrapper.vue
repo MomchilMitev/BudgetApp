@@ -10,23 +10,26 @@
       bg-gradient-to-br from-[#0E112A] to-[#2E325A]
       rounded-full
       shadow-[50px_50px_100px_0px_#121530,-50px_-50px_100px_0px_#272C5A]
-      relative
       p-5
       -z-10
     "
   >
     <div
       class="
+        flex
+        flex-col
+        justify-center
+        items-center
         w-full
         h-full
         bg-black-dark
-        block
         p-3.5
         rounded-full
+        relative
       "
     >
       <button
-        class="absolute left-1/2 top-28 translate-x-[-50%] text-base text-lila-light tracking-[15px] uppercase hover:cursor-pointer"
+        class="relative w-max text-base text-lila-light tracking-[15px] uppercase mb-2 z-10"
       >
         start
       </button>
@@ -34,7 +37,7 @@
         width="340"
         height="340"
         viewBox="0 0 340 340"
-        class="h-full w-full"
+        class="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] h-[100% - 25px] w-[100% - 25px]"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -46,12 +49,12 @@
         />
       </svg>
       <span
-        class="absolute left-1/2 bottom-40 translate-x-[-50%] block font-bold text-8xl text-lila-light"
+        class="font-bold text-8xl text-lila-light"
       >
         00:00
       </span>
       <button
-        class="absolute left-1/2 bottom-28 translate-x-[-50%] text-base text-lila-light tracking-[15px] uppercase hover:cursor-pointer"
+        class="relative w-max text-base text-lila-light tracking-[15px] uppercase mt-2 z-10"
       >
         restart
       </button>
