@@ -1,7 +1,10 @@
 <script setup lang="ts">
   import { ref } from 'vue';
   import ModeButton from './ModeButton.vue';
-  const activeState = ref('bg-red text-black-light');
+  import { useAppStore } from '@stores';
+  const appStore = useAppStore();
+
+  // const activeState = ref('bg-red text-black-light');
   const isFirstBtnActive = ref(true);
   const isSecondBtnActive = ref(false);
   const isThirdBtnActive = ref(false);
@@ -27,17 +30,17 @@
     class="w-[373px] m-auto bg-black-dark p-2 rounded-[31.5px] flex justify-between"
   >
     <ModeButton
-      :class="[isFirstBtnActive ? activeState : 'text-lila-light']"
+      :class="[isFirstBtnActive ? appStore.systemColor : 'text-lila-light']"
       text="pomodoro"
       @click="onModeButtonClick(1)"
     />
     <ModeButton
-      :class="[isSecondBtnActive ? activeState : 'text-lila-light']"
+      :class="[isSecondBtnActive ? appStore.systemColor : 'text-lila-light']"
       text="short break"
       @click="onModeButtonClick(2)"
     />
     <ModeButton
-      :class="[isThirdBtnActive ? activeState : 'text-lila-light']"
+      :class="[isThirdBtnActive ? appStore.systemColor : 'text-lila-light']"
       text="long break"
       @click="onModeButtonClick(3)"
     />
