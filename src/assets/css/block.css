@@ -1,0 +1,73 @@
+.pomodoro {
+  text-align: center;
+}
+
+.pomodoro__btns {
+  background-color: var(--clr-bg-2);
+  border-radius: 31px;
+  padding: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 26px;
+  color: var(--clr-text-500);
+  cursor: pointer;
+  padding: 15px 25px;
+  transition: all .3s;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+
+.btn:where(:not(.active)):hover {
+  color: var(--clr-text-400);
+}
+
+.active {
+  background-color: var(--theme);
+  color: var(--clr-btn-text);
+}
+
+.pomodoro__counter {
+  background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+  border-radius: 50%;
+  box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+  padding: 22px;
+  position: relative;
+}
+
+.circle {
+  background-color: var(--clr-bg-2);
+  border-radius: 50%;
+  padding: 14px;
+}
+
+.circle:hover {
+  cursor: pointer;
+}
+
+.pomodoro__data {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pomodoro__minutes {
+  font-size: 100px;
+  line-height: 124px;
+  letter-spacing: -5px;
+}
+
+.pomodoro__action {
+  font-size: 16px;
+  letter-spacing: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

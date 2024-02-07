@@ -1,0 +1,20 @@
+:root {
+  --ff-kumbh: 'Kumbh Sans', sans-serif;
+  --ff-roboto: 'Roboto Slab', serif;
+  --ff-space: 'Space Mono', monospace;
+  --ff-base: var(--ff-kumbh);
+
+  --clr-theme-1: hsl(0, 91%, 71%);
+  --clr-theme-2: hsl(182, 91%, 71%);
+  --clr-theme-3: hsl(284, 89%, 74%);
+  --theme: var(--clr-theme-1);
+
+  --clr-text-500: hsla(227, 100%, 92%, .4);
+  --clr-text-400: hsl(227, 100%, 92%);
+  --clr-btn-text: var(--clr-bg-2);
+
+  --clr-bg-1: hsl(235, 35%, 18%);
+  --clr-bg-2: hsl(234, 39%, 14%);
+
+  --fw-700: 700
+}

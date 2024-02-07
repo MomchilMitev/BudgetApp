@@ -1,3 +1,2 @@
-# Pomomodoro app
-
-Simple pomodoro app build with vue 3.
+# pomodoro
+Simple pomodoro app with html, css and javascript
